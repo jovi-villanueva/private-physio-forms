@@ -711,6 +711,18 @@
 </div>
 
 </div>
+<script>
+  // Pre-fill patient name from URL parameter
+  const params = new URLSearchParams(window.location.search);
+  const patientName = params.get('patient');
+  if (patientName) {
+    const nameField = document.querySelector('input[name="patient_name"]');
+    if (nameField) {
+      // Capitalize first letter of each word
+      nameField.value = patientName.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+  }
+</script>
 </form>
 </body>
 </html>
