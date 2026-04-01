@@ -549,10 +549,10 @@
       <div class="field-group"><span class="field-label">Referred by</span><input type="text" name="referral_name"></div>
       <div class="field-group"><span class="field-label">Referral Date</span><input type="text" name="referral_date"></div>
     </div>
-    <div class="field-row" style="margin-bottom: 2px;">
-      <span class="field-label" style="min-width: 26mm;">Referral Type</span>
+    <div class="field-row" style="margin-bottom: 4px;">
+      <span class="field-label" style="min-width: 18mm;">Referral Type</span>
     </div>
-    <div class="checkbox-row" style="margin-left: 28mm;">
+    <div class="checkbox-row">
       <div class="checkbox-item"><input type="checkbox" name="referral_type_epc"> EPC (Medicare)</div>
       <div class="checkbox-item"><input type="checkbox" name="referral_type_private"> Private</div>
       <div class="checkbox-item"><input type="checkbox" name="referral_type_workcover"> WorkCover</div>
@@ -581,7 +581,7 @@
   <!-- WORKCOVER / WORKERS COMPENSATION -->
   <div class="section" id="workcover-section">
     <div class="section-header">Workers Compensation (WorkCover) Details</div>
-    <p style="font-size:12px; color:var(--text-secondary); margin-bottom:8px;">Complete this section only if your injury is a workers compensation claim.</p>
+    <p style="font-size:8pt; color:var(--text-secondary); margin-bottom:6px;">Complete this section only if your injury is a workers compensation claim.</p>
     <div class="field-row-double">
       <div class="field-group"><span class="field-label">Claim Number *</span><input type="text" name="workcover_claim_number" placeholder="e.g. WC2025/123456"></div>
       <div class="field-group"><span class="field-label">Date of Injury *</span><input type="text" name="workcover_date_of_injury" placeholder="DD/MM/YYYY"></div>
@@ -590,37 +590,41 @@
       <div class="field-group"><span class="field-label">Insurer / Claims Agent *</span><input type="text" name="workcover_insurer" placeholder="e.g. EML, Allianz, GIO, QBE"></div>
       <div class="field-group"><span class="field-label">Insurer Phone</span><input type="text" name="workcover_insurer_phone"></div>
     </div>
-    <div class="field-row">
-      <div class="field-group" style="flex:1;"><span class="field-label">Insurer Email / Claims Contact</span><input type="text" name="workcover_insurer_email" placeholder="For invoicing and reports"></div>
+    <div class="field-row-double">
+      <div class="field-group"><span class="field-label">Insurer Email</span><input type="text" name="workcover_insurer_email" placeholder="For invoicing and reports"></div>
+      <div class="field-group"><span class="field-label"></span><input type="text" style="visibility:hidden;"></div>
     </div>
-    <div class="section-sub" style="margin-top:10px;">Employer Details</div>
+    <div class="section-sub">Employer Details</div>
     <div class="field-row-double">
       <div class="field-group"><span class="field-label">Employer Name *</span><input type="text" name="workcover_employer_name"></div>
       <div class="field-group"><span class="field-label">Employer Address</span><input type="text" name="workcover_employer_address"></div>
     </div>
     <div class="field-row-double">
-      <div class="field-group"><span class="field-label">Employer Contact Person</span><input type="text" name="workcover_employer_contact"></div>
+      <div class="field-group"><span class="field-label">Employer Contact</span><input type="text" name="workcover_employer_contact"></div>
       <div class="field-group"><span class="field-label">Employer Phone</span><input type="text" name="workcover_employer_phone"></div>
     </div>
-    <div class="section-sub" style="margin-top:10px;">Injury Details</div>
-    <div class="field-row">
-      <div class="field-group" style="flex:1;"><span class="field-label">How did the injury occur? *</span><textarea name="workcover_injury_mechanism" placeholder="Describe how the injury happened at work"></textarea></div>
+    <div class="section-sub">Injury Details</div>
+    <div class="field-row-double">
+      <div class="field-group"><span class="field-label">How did the injury occur? *</span><textarea name="workcover_injury_mechanism" placeholder="Describe how the injury happened at work"></textarea></div>
+      <div class="field-group"><span class="field-label"></span></div>
     </div>
     <div class="field-row-double">
       <div class="field-group"><span class="field-label">Treating Doctor / Surgeon</span><input type="text" name="workcover_treating_doctor"></div>
-      <div class="field-group"><span class="field-label">Surgery Date (if applicable)</span><input type="text" name="workcover_surgery_date" placeholder="DD/MM/YYYY"></div>
+      <div class="field-group"><span class="field-label">Surgery Date</span><input type="text" name="workcover_surgery_date" placeholder="DD/MM/YYYY"></div>
     </div>
-    <div class="field-row">
-      <div class="field-group" style="flex:1;"><span class="field-label">Surgery / Procedure Details</span><input type="text" name="workcover_surgery_details" placeholder="e.g. ORIF right proximal tibia"></div>
+    <div class="field-row-double">
+      <div class="field-group"><span class="field-label">Surgery / Procedure</span><input type="text" name="workcover_surgery_details" placeholder="e.g. ORIF right proximal tibia"></div>
+      <div class="field-group"><span class="field-label"></span><input type="text" style="visibility:hidden;"></div>
     </div>
-    <div class="section-sub" style="margin-top:10px;">Current Work Status</div>
+    <div class="section-sub">Current Work Status</div>
     <div class="checkbox-row">
       <div class="checkbox-item"><input type="checkbox" name="work_status_full"> Full duties</div>
       <div class="checkbox-item"><input type="checkbox" name="work_status_modified"> Modified / light duties</div>
       <div class="checkbox-item"><input type="checkbox" name="work_status_not_working"> Not currently working</div>
     </div>
-    <div class="field-row">
-      <div class="field-group" style="flex:1;"><span class="field-label">Work restrictions (if any)</span><input type="text" name="workcover_work_restrictions" placeholder="e.g. no heavy lifting, no prolonged standing"></div>
+    <div class="field-row-double">
+      <div class="field-group"><span class="field-label">Work restrictions</span><input type="text" name="workcover_work_restrictions" placeholder="e.g. no heavy lifting, no prolonged standing"></div>
+      <div class="field-group"><span class="field-label"></span><input type="text" style="visibility:hidden;"></div>
     </div>
   </div>
 
