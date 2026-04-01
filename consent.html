@@ -673,6 +673,13 @@
         <li>Late cancellations (less than 24 hours) may incur a cancellation fee of <span class="emphasis">50% of the session fee</span></li>
         <li>Repeated no-shows may result in future appointments requiring prepayment</li>
       </ul>
+      <div id="workcover-cancellation" style="margin-top: 10px; padding: 10px; background: #f0f5ff; border-left: 3px solid var(--brand); border-radius: 4px;">
+        <p style="font-size: 12px; font-weight: 600; margin-bottom: 4px;">Workers Compensation (WorkCover) patients:</p>
+        <ul style="font-size: 12px;">
+          <li>Cancellation fees <span class="emphasis">cannot</span> be charged under the NSW Workers Compensation Scheme</li>
+          <li>Please provide as much notice as possible if you need to cancel or reschedule</li>
+        </ul>
+      </div>
     </div>
   </div>
 
@@ -682,12 +689,34 @@
   <div class="section">
     <div class="section-header"><span class="section-number">9</span> Financial Agreement</div>
     <div class="section-body">
-      <ul>
-        <li>I understand the fee schedule has been explained to me: <span class="emphasis">Initial (60 min) $190</span> | <span class="emphasis">Follow-up (30 min) $145</span></li>
-        <li>I am responsible for payment at the time of service unless other arrangements have been made</li>
-        <li>Medicare/health fund rebates (if applicable) have been discussed with me</li>
-        <li>Any agreed discount has been documented in my patient record</li>
-      </ul>
+      <p style="font-size: 12px; font-weight: 600; margin-bottom: 8px;">Select the section that applies to you:</p>
+
+      <div style="margin-bottom: 12px;">
+        <div class="checkbox-item">
+          <input type="checkbox" name="financial_private" value="yes">
+          <span class="consent-label"><span class="emphasis">Private / Health Fund / Medicare (EPC) patients:</span></span>
+        </div>
+        <ul style="margin-left: 28px; margin-top: 4px;">
+          <li>I understand the fee schedule has been explained to me: <span class="emphasis">Initial (60 min) $190</span> | <span class="emphasis">Follow-up (30 min) $145</span></li>
+          <li>I am responsible for payment at the time of service unless other arrangements have been made</li>
+          <li>Medicare/health fund rebates (if applicable) have been discussed with me</li>
+          <li>Any agreed discount has been documented in my patient record</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="checkbox-item">
+          <input type="checkbox" name="financial_workcover" value="yes">
+          <span class="consent-label"><span class="emphasis">Workers Compensation (WorkCover) patients:</span></span>
+        </div>
+        <ul style="margin-left: 28px; margin-top: 4px;">
+          <li>Treatment fees are set by <span class="emphasis">SIRA gazetted rates</span> under the NSW Workers Compensation Scheme</li>
+          <li>Your insurer / claims agent will be invoiced directly - <span class="emphasis">you will not be charged any gap or out-of-pocket fees</span> for approved treatment</li>
+          <li>Treatment requires approval from your insurer via an Allied Health Treatment Request (AHTR)</li>
+          <li>If your workers compensation claim is declined or treatment is not approved by your insurer, standard private fees will apply</li>
+          <li>I consent to my physiotherapist submitting invoices, treatment reports, and Allied Health Treatment Requests to my insurer on my behalf</li>
+        </ul>
+      </div>
     </div>
   </div>
 
