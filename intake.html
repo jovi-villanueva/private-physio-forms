@@ -451,11 +451,12 @@
 </head>
 <body>
 
-<form action="https://formsubmit.co/contact@wellworx.physio" method="POST">
-<input type="hidden" name="_subject" value="Patient Intake Form Submission">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_captcha" value="false">
+<form action="https://macbook-pro.tail65ce31.ts.net/intake" method="POST">
+<input type="hidden" name="_form_type" value="intake">
 <input type="hidden" name="_next" value="https://jovi-villanueva.github.io/private-physio-forms/success.html">
+<!-- Honeypot: real patients never see or fill this (it is off-screen). Bots fill every
+     field, so a non-empty value flags a bot and the server silently drops it. -->
+<input type="text" name="_hp_company" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
 
 <div class="toolbar">
   <button type="submit">Submit Form</button>
