@@ -146,11 +146,14 @@
 <div class="gold-bar"></div>
 
 <!-- Hidden FormSubmit form -->
-<form id="lefsForm" action="https://formsubmit.co/contact@wellworx.physio" method="POST" style="display:none;">
+<form id="lefsForm" action="https://macbook-pro.tail65ce31.ts.net/intake" method="POST" style="display:none;">
+  <input type="hidden" name="_form_type" value="lefs">
   <input type="hidden" name="_subject" value="LEFS Result">
-  <input type="hidden" name="_template" value="table">
-  <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_next" value="https://jovi-villanueva.github.io/private-physio-forms/success.html">
+  <!-- Honeypot: real patients never see or fill this. Bots fill every field, so a
+       non-empty value flags a bot and the server silently drops it. -->
+  <input aria-hidden="true" autocomplete="off" name="_hp_company" tabindex="-1" type="text">
+  <input type="hidden" name="patient_name" id="h_pname">
   <input type="hidden" name="Patient Name" id="h_name">
   <input type="hidden" name="Date Completed" id="h_date">
   <input type="hidden" name="Total Score" id="h_total">
@@ -311,9 +314,11 @@ function submitForm() {
   else interp = 'Significant functional limitation';
 
   var today = new Date();
-  var dateStr = today.getDate() + '/' + (today.getMonth() + 1) + '/' + today.getFullYear();
+  var two = function (n) { return (n < 10 ? '0' : '') + n; };
+  var dateStr = two(today.getDate()) + '/' + two(today.getMonth() + 1) + '/' + today.getFullYear();
 
   // Populate hidden form
+  document.getElementById('h_pname').value = name;
   document.getElementById('h_name').value = name;
   document.getElementById('h_date').value = dateStr;
   document.getElementById('h_total').value = total + ' / 80';
